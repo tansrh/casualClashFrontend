@@ -1,5 +1,5 @@
 import { io } from 'https://cdn.socket.io/4.7.5/socket.io.esm.min.js';
-export const socket = io('http://localhost:3001'); // Change to your backend URL if needed
+export const socket = io('https://casualclashbackend.onrender.com'); // Change to your backend URL if needed
 
 // Utility to mirror a cell index for the opponent's perspective
 export function mirrorCell(cellIndex, columns, rows) {
