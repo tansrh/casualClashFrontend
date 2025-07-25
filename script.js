@@ -22,6 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // Listen for userJoined event from server
     socket.on('userJoined', ({ userId, totalUsers }) => {
         showToast(`A new user joined! Total users: ${totalUsers}`);
+        if(totalUsers === 2){
+            emitAction(mirrorCell(playerIndex, columns, rows), 'opponent', 'add');
+        }
     });
     const resultDiv = document.createElement('div');
     resultDiv.id = 'result';
